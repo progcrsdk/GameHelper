@@ -11,10 +11,10 @@ data class FavoriteGenre(
     val id: Long = 0,
 
     @Column(nullable = false)
-    val genreName: String,      // например: "Комедия"
+    val genreName: String,
 
     @Column(nullable = false)
-    val genreSlug: String,      // например: "комедия" (для внутреннего использования)
+    val genreSlug: String,
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)

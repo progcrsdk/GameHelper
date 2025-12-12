@@ -11,8 +11,7 @@ data class User(
     val lastName: String? = null,
 
     @OneToMany(mappedBy = "user", cascade = [CascadeType.ALL], fetch = FetchType.EAGER, orphanRemoval = true)
-    val favorites: MutableList<FavoriteGame> = mutableListOf(), // ← было FavoriteMovie → стало FavoriteGame
-
+    val favorites: MutableList<FavoriteGame> = mutableListOf(),
     @OneToMany(mappedBy = "user", cascade = [CascadeType.ALL], orphanRemoval = true)
     val history: MutableList<RequestHistory> = mutableListOf(),
 

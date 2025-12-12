@@ -18,9 +18,6 @@ class RawgService(
     private val baseUrl = "https://api.rawg.io/api"
     private val random = Random()
 
-    /**
-     * Возвращает одну случайную игру из всего каталога.
-     */
     fun getRandomGame(): RawgGame? {
         // Случайная страница от 1 до 100
         val randomPage = random.nextInt(100) + 1
@@ -35,9 +32,6 @@ class RawgService(
         return fetchGamesList(request).firstOrNull()
     }
 
-    /**
-     * Поиск игр по названию.
-     */
     fun searchGamesByName(query: String, limit: Int = 3): List<RawgGame> {
         val encoded = java.net.URLEncoder.encode(query, Charsets.UTF_8)
         val url = "$baseUrl/games?key=$rawgApiKey&search=$encoded&page_size=$limit"
@@ -45,9 +39,6 @@ class RawgService(
         return fetchGamesList(request)
     }
 
-    /**
-     * Поиск игр по жанрам — ВОЗВРАЩАЕТ СЛУЧАЙНУЮ ВЫБОРКУ из подходящих игр.
-     */
     fun searchGamesByGenres(genres: List<String>, limit: Int = 5): List<RawgGame> {
         if (genres.isEmpty()) return emptyList()
 
@@ -92,8 +83,6 @@ class RawgService(
             }
         }
     }
-
-    // ------------------ Вспомогательные методы ------------------
 
     private fun fetchGamesList(request: Request): List<RawgGame> {
         return client.newCall(request).execute().use { response ->
