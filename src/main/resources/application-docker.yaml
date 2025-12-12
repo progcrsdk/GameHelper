@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/moviemate
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+kinopoisk:
+  api:
+    token: ENC(hHZsodWS1k64WphgO/o5Ce5aaP67Iw3d7GohwWbxUHTygC4LvxPxLeLxnDWbaDoo1LggKCJ07UaH4PEBRCj9/w==)
+
+telegram:
+  bot:
+    token: ENC(TSi1I9ZUCol9hFQ6lUFHJe1UXMH3Z6R77TfU8Hs+ihIFA3RowF+BY2G1wNkpX6TeuJsCD9ZjZzBan2f4/iU962Gk9rZpg/0NC7Y092NM4Yk=)
+    username: FilmsMateBot

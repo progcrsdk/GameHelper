@@ -1,0 +1,47 @@
+@startuml
+class User {
+    - telegramId: Long
+    - username: String
+    - firstName: String
+    - lastName: String
+    + favorites: List<FavoriteMovie>
+    + favoriteGenres: List<FavoriteGenre>
+    + history: List<RequestHistory>
+}
+
+class FavoriteMovie {
+    - movieId: Long
+    - title: String
+    - user: User
+}
+
+class FavoriteGenre {
+    - genreSlug: String
+    - genreName: String
+    - user: User
+}
+
+class RequestHistory {
+    - requestId: Long
+    - query: String
+    - timestamp: Date
+    - user: User
+}
+
+class KpService {
+    + getMoviesByName(name: String): List<KpMovie>
+    + getMoviesByGenres(genres: List<String>): List<KpMovie>
+    + getRandomMovie(): KpMovie
+}
+
+class Bot {
+    + sendMessage(chatId: Long, text: String)
+    + sendPhoto(chatId: Long, photoUrl: String, caption: String)
+}
+
+User "1" --> "*" FavoriteMovie
+User "1" --> "*" FavoriteGenre
+User "1" --> "*" RequestHistory
+Bot ..> KpService : uses
+
+@enduml

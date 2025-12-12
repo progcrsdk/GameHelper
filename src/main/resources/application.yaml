@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/libro
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+rawg:
+  api:
+    key: 7d220efe4eea4902b9e6db4a2c894fe8
+
+telegram:
+  bot:
+    token: 8588580784:AAFvftK_Y6R3SVlpm0ZQ3fZpxRStE1XmIes
+    username: GameMateHelper
