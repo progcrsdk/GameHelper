@@ -10,7 +10,7 @@ plugins {
     id("org.cthing.jasypt") version "1.0.0"
 }
 
-group = "org.example"
+group = "GameMate"
 version = "1.0"
 
 java {
