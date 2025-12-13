@@ -1,17 +1,17 @@
 spring:
   datasource:
-    url: jdbc:postgresql://postgres:5432/moviemate
+    url: jdbc:postgresql://postgres:5432/libro
     username: postgres
     password: postgres
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
-kinopoisk:
+rawg:
   api:
-    token: ENC(hHZsodWS1k64WphgO/o5Ce5aaP67Iw3d7GohwWbxUHTygC4LvxPxLeLxnDWbaDoo1LggKCJ07UaH4PEBRCj9/w==)
+    token: ENC(UP07gRFAPyUd+J1OFrRvKoEl2Vch1cLUkLJa8GGw1/i+MATZBdpifrtE5Pat3yoMOMB+fD+He6+Y0T3q8FfLvqYq06+7wVsuXUzexqpJ0go=)
 
 telegram:
   bot:
-    token: ENC(TSi1I9ZUCol9hFQ6lUFHJe1UXMH3Z6R77TfU8Hs+ihIFA3RowF+BY2G1wNkpX6TeuJsCD9ZjZzBan2f4/iU962Gk9rZpg/0NC7Y092NM4Yk=)
-    username: FilmsMateBot
+    token: ENC(imzzF9mggh3kLSUpKqAe+T4qVdVGNDcS5t6KF7Oxnxt8pD44g6VsGK7D5/emaT/x3Ay9DpM/x+TuTUQE1cFbddKR8H7JOuQOaAwDT1SvvWc=)
+    username: GameMateHelper

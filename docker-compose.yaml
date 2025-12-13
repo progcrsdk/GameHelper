@@ -3,10 +3,10 @@ version: "3.9"
 services:
   postgres:
     image: postgres:16
-    container_name: moviemate-postgres
+    container_name: gamemate-postgres
     restart: always
     environment:
-      POSTGRES_DB: moviemate
+      POSTGRES_DB: libro
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     volumes:
@@ -16,7 +16,7 @@ services:
 
   app:
     build: .
-    container_name: moviemate-app
+    container_name: gamemate-app
     depends_on:
       - postgres
     restart: always
